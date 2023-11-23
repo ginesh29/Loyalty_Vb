@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menuTabs>
+
+  <formName id="ASP.customerdetails_aspx">
+    <menuTab>0</menuTab>
+    <accessPermission>1</accessPermission>
+  </formName>
+  
+  <formName id="ASP.redemption_aspx">
+    <menuTab>0</menuTab>
+    <accessPermission>2</accessPermission>
+  </formName>
+  
+  <formName id="ASP.failedtrans_aspx">
+    <menuTab>0</menuTab>
+    <accessPermission>2</accessPermission>
+  </formName>
+
+
+  <formName id="ASP.redrulesdownload_aspx">
+    <menuTab>2</menuTab>
+    <accessPermission>2</accessPermission>
+  </formName>
+
+  <formName id="ASP.reports_aspx">
+    <menuTab>1</menuTab>
+    <accessPermission>2</accessPermission>
+  </formName>
+
+  <formName id="ASP.custsearchadvanced_aspx">
+    <menuTab>1</menuTab>
+    <accessPermission>2</accessPermission>
+  </formName>
+
+  <formName id="ASP.custtrans_aspx">
+    <menuTab>1</menuTab>
+    <accessPermission>1</accessPermission>
+  </formName>
+  
+  <formName id="ASP.salesrulesdownload_aspx">
+    <menuTab>2</menuTab>
+    <accessPermission>2</accessPermission>
+  </formName>
+  
+  
+  <formName id="ASP.redemptionrules_aspx">
+    <menuTab>2</menuTab>
+    <accessPermission>2</accessPermission>
+  </formName>
+
+
+  <formName id="ASP.salesrules_aspx">
+    <menuTab>2</menuTab>
+    <accessPermission>2</accessPermission>
+  </formName>
+  
+  <formName id="ASP.company_aspx">
+    <menuTab>2</menuTab>
+    <accessPermission>1</accessPermission>
+  </formName>
+
+  <formName id="ASP.profession_aspx">
+    <menuTab>2</menuTab>
+    <accessPermission>1</accessPermission>
+  </formName>
+
+
+  <formName id="ASP.custcompany_aspx">
+    <menuTab>2</menuTab>
+    <accessPermission>1</accessPermission>
+  </formName>
+
+  <formName id="ASP.custlocation_aspx">
+    <menuTab>2</menuTab>
+    <accessPermission>1</accessPermission>
+  </formName>
+  
+  
+  <formName id="ASP.users_aspx">
+    <menuTab>2</menuTab>
+    <accessPermission>2</accessPermission>
+  </formName>
+
+  
+  
+  
+  <formName id="ASP.generalsettings_aspx">
+    <menuTab>2</menuTab>
+    <accessPermission>2</accessPermission>
+  </formName>
+  
+  <formName id="ASP.updatesalestransactions_aspx">
+    <menuTab>3</menuTab>
+    <accessPermission>2</accessPermission>
+  </formName>
+  
+  <formName id="ASP.updatecustdetails_aspx">
+    <menuTab>3</menuTab>
+    <accessPermission>2</accessPermission>
+  </formName>
+
+	<formName id="ASP.customerdetails_aspx">
+		<menuTab>0</menuTab>
+		<accessPermission>1</accessPermission>
+	</formName>
+</menuTabs>

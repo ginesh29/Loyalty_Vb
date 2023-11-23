@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsRedRules" targetNamespace="http://tempuri.org/DsRedRules.xsd" xmlns:mstns="http://tempuri.org/DsRedRules.xsd" xmlns="http://tempuri.org/DsRedRules.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsRedRules" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DsRedRules" msprop:Generator_UserDSName="DsRedRules">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtRedRules" msprop:Generator_TableClassName="DtRedRulesDataTable" msprop:Generator_TableVarName="tableDtRedRules" msprop:Generator_TablePropName="DtRedRules" msprop:Generator_RowDeletingName="DtRedRulesRowDeleting" msprop:Generator_RowChangingName="DtRedRulesRowChanging" msprop:Generator_RowEvHandlerName="DtRedRulesRowChangeEventHandler" msprop:Generator_RowDeletedName="DtRedRulesRowDeleted" msprop:Generator_UserTableName="DtRedRules" msprop:Generator_RowChangedName="DtRedRulesRowChanged" msprop:Generator_RowEvArgName="DtRedRulesRowChangeEvent" msprop:Generator_RowClassName="DtRedRulesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RuleId" msprop:Generator_ColumnVarNameInTable="columnRuleId" msprop:Generator_ColumnPropNameInRow="RuleId" msprop:Generator_ColumnPropNameInTable="RuleIdColumn" msprop:Generator_UserColumnName="RuleId" type="xs:string" minOccurs="0" />
+              <xs:element name="CoCd" msprop:Generator_ColumnVarNameInTable="columnCoCd" msprop:Generator_ColumnPropNameInRow="CoCd" msprop:Generator_ColumnPropNameInTable="CoCdColumn" msprop:Generator_UserColumnName="CoCd" type="xs:string" minOccurs="0" />
+              <xs:element name="RuleRes" msprop:Generator_ColumnVarNameInTable="columnRuleRes" msprop:Generator_ColumnPropNameInRow="RuleRes" msprop:Generator_ColumnPropNameInTable="RuleResColumn" msprop:Generator_UserColumnName="RuleRes" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemCd" msprop:Generator_ColumnVarNameInTable="columnItemCd" msprop:Generator_ColumnPropNameInRow="ItemCd" msprop:Generator_ColumnPropNameInTable="ItemCdColumn" msprop:Generator_UserColumnName="ItemCd" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemDes" msprop:Generator_ColumnVarNameInTable="columnItemDes" msprop:Generator_ColumnPropNameInRow="ItemDes" msprop:Generator_ColumnPropNameInTable="ItemDesColumn" msprop:Generator_UserColumnName="ItemDes" type="xs:string" minOccurs="0" />
+              <xs:element name="CustGrp" msprop:Generator_ColumnVarNameInTable="columnCustGrp" msprop:Generator_ColumnPropNameInRow="CustGrp" msprop:Generator_ColumnPropNameInTable="CustGrpColumn" msprop:Generator_UserColumnName="CustGrp" type="xs:string" minOccurs="0" />
+              <xs:element name="CustGrpDes" msprop:Generator_ColumnVarNameInTable="columnCustGrpDes" msprop:Generator_ColumnPropNameInRow="CustGrpDes" msprop:Generator_ColumnPropNameInTable="CustGrpDesColumn" msprop:Generator_UserColumnName="CustGrpDes" type="xs:string" minOccurs="0" />
+              <xs:element name="FromPoints" msprop:Generator_ColumnVarNameInTable="columnFromPoints" msprop:Generator_ColumnPropNameInRow="FromPoints" msprop:Generator_ColumnPropNameInTable="FromPointsColumn" msprop:Generator_UserColumnName="FromPoints" type="xs:string" minOccurs="0" />
+              <xs:element name="EntryBy" msprop:Generator_ColumnVarNameInTable="columnEntryBy" msprop:Generator_ColumnPropNameInRow="EntryBy" msprop:Generator_ColumnPropNameInTable="EntryByColumn" msprop:Generator_UserColumnName="EntryBy" type="xs:string" minOccurs="0" />
+              <xs:element name="EntryDt" msprop:Generator_ColumnVarNameInTable="columnEntryDt" msprop:Generator_ColumnPropNameInRow="EntryDt" msprop:Generator_ColumnPropNameInTable="EntryDtColumn" msprop:Generator_UserColumnName="EntryDt" type="xs:string" minOccurs="0" />
+              <xs:element name="EditBy" msprop:Generator_ColumnVarNameInTable="columnEditBy" msprop:Generator_ColumnPropNameInRow="EditBy" msprop:Generator_ColumnPropNameInTable="EditByColumn" msprop:Generator_UserColumnName="EditBy" type="xs:string" minOccurs="0" />
+              <xs:element name="EditDt" msprop:Generator_ColumnVarNameInTable="columnEditDt" msprop:Generator_ColumnPropNameInRow="EditDt" msprop:Generator_ColumnPropNameInTable="EditDtColumn" msprop:Generator_UserColumnName="EditDt" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

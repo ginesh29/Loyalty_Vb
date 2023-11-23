@@ -1,0 +1,251 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPageLoyalty.master.vb" Inherits="MasterPageLoyalty" %>
+
+<%@ Register Assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="AjaxControlToolkit" %>
+<%--<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>--%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <link href="App_Themes/pluralism/style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style4
+        {
+            width: 672px;
+        }
+    </style>
+      <style type="text/css">  
+          .accordion {
+        }  
+          
+        .accordionHeader {  
+            border: 1px solid #2F4F4F;  
+            color: white;  
+            background-color: #2E4d7B;  
+            font-family: Arial, Sans-Serif;  
+            font-size: 12px;  
+            font-weight: bold;  
+            padding: 5px;  
+            margin-top: 5px;  
+            cursor: pointer;  
+            text-decoration:none;
+        }  
+          
+        .accordionHeaderSelected {  
+            border: 1px solid #2F4F4F;  
+            color: white;  
+            background-color: #5078B3;  
+            font-family: Arial, Sans-Serif;  
+            font-size: 12px;  
+            font-weight: bold;  
+            padding: 5px;  
+            margin-top: 5px;  
+            cursor: pointer;  
+        }  
+          
+        .accordionContent {  
+            background-color: #D3DEEF;  
+            border: 1px dashed #2F4F4F;  
+            border-top: none;  
+            padding: 5px;  
+            padding-top: 10px; 
+        }  
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+              width: 208px;
+          }
+    </style>  
+    <link href="menu_files/accordion-menu.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                         </asp:ScriptManager>
+    <div>
+    <div id="wrapper">
+	<div id="wrapper2">
+		<div id="header">
+			<div id="logo">
+				
+			</div>
+			<div id="menu">
+			</div>
+                    <asp:Image ID="imgBannerHead" runat="server" Height="75px" 
+                Width="517px" Visible="False" />
+		    <asp:Label ID="lblWelcome" runat="server" CssClass="centerAlign" 
+                ForeColor="White" Width="110px"></asp:Label>
+            <asp:LinkButton ID="lnkLogout" runat="server" CausesValidation="False" 
+                ForeColor="White">Logout</asp:LinkButton>
+		</div
+        >
+		<!-- end #header -->
+		<div id="page">
+            <!-- end #sidebar --><div id="content">
+				<div class="post">
+					<div class="entry"> 
+                        <table class="style1">
+                            <tr>
+                                <td class="style2" valign="top">
+                                    <AjaxControlToolkit:Accordion ID="Accordion2" runat="server" ContentCssClass="accordionContent"
+                                        CssClass="accordion" HeaderCssClass="accordionHeader" HeaderSelectedCssClass="accordionHeaderSelected"
+                                        Height="557px" Width="170px">
+                                        <Panes>
+                                          
+                                            <AjaxControlToolkit:AccordionPane ID="AccordionPane1" runat="server" ContentCssClass=""
+                                                HeaderCssClass="">
+                                                <Header>
+                                                    Loyalty
+                                                </Header>
+                                                <Content>
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <a class="button" href="CustomerDetails.aspx?sel=search"><span class="search">Customer Search</span> </a>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                             <a class="button" href="CustomerDetails.aspx?sel=newcust"><span class="add">Add Customer</span> </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a class="button" href="Redemption.aspx"><span class="add">Redemption</span> </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                             <a class="button" href="FailedTrans.aspx"><span class="add">Failed Transaction</span> </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </Content>
+                                            </AjaxControlToolkit:AccordionPane>
+                                            <AjaxControlToolkit:AccordionPane ID="AccordionPane2" runat="server" ContentCssClass=""
+                                                HeaderCssClass="">
+                                                <Header>
+                                                    Reports
+                                                </Header>
+                                                <Content>
+                                                    <a class="button" href="Reports.aspx?rpt=custDtls"><span class="">Customer Details</span> </a>
+                                                    <a class="button" href="Reports.aspx?rpt=custTrans"><span class="">Customer Transactions</span> </a>
+                                                    <a class="button" href="CustSearchAdvanced.aspx"><span class="">Advanced Cust Search</span> </a>
+                                                    <a class="button" href="Reports.aspx?rpt=dailyTrans"><span class="">Daily Transaction Report</span> </a>
+                                                     <a class="button" href="Reports.aspx?rpt=redCustWise"><span class="">Customer Wise Redemption</span> </a>
+                                                     <a class="button" href="Reports.aspx?rpt=redCompWiseCustWise"><span class="">Branch Wise Redemption</span> </a>
+                                                      <a class="button" href="Reports.aspx?rpt=interBranchAmount"><span class="">Inter Branch Analysis</span> </a>
+                                                    <a class="button" href="Reports.aspx?rpt=salesRules"><span class="">Sales Rules</span> </a>
+                                                    <a class="button" href="Reports.aspx?rpt=redRules"><span class="">Redemption Rules</span> </a>
+
+                                                    
+
+                                                </Content>
+                                            </AjaxControlToolkit:AccordionPane>
+                                            <%-- <AjaxControlToolkit:AccordionPane ID="AccordionPane3" runat="server" ContentCssClass=""
+                                                HeaderCssClass="">
+                                                <Header>
+                                                    Downloads
+                                                </Header>
+                                                <Content>
+                                                      <a class="button" href="SalesRulesDownload.aspx"><span class="">Sales Rule</span> </a>
+                                                      <a class="button" href="RedRulesDownload.aspx"><span class="">Redemption Rule</span> </a>
+                                                </Content>
+                                            </AjaxControlToolkit:AccordionPane>--%>
+                                             <AjaxControlToolkit:AccordionPane ID="AccordionPane5" runat="server" ContentCssClass=""
+                                                HeaderCssClass="">
+                                                <Header>
+                                                    Settings
+                                                </Header>
+                                                 <Content>
+                                                     <a class="button" href="SalesRules.aspx"><span class="">Sales Rule</span> </a><a
+                                                         class="button" href="RedemptionRules.aspx"><span class="">Redemption Rule</span>
+                                                     </a><a class="button" href="Company.aspx"><span class="">Company Details</span>
+                                                     </a><a class="button" href="Users.aspx"><span class="">User Details</span> </a>
+                                                      <a class="button" href="Profession.aspx"><span class="">Profession</span> </a>
+                                                       <a class="button" href="CustCompany.aspx"><span class="">Customer Company</span> </a>
+                                                       <a class="button" href="CustLocation.aspx"><span class="">Customer Location</span> </a>
+                                                     <a class="button" href="GeneralSettings.aspx"><span class="">General Settings</span> </a>
+                                                 </Content>
+                                            </AjaxControlToolkit:AccordionPane>
+                                              <AjaxControlToolkit:AccordionPane ID="AccordionPane4" runat="server" ContentCssClass=""
+                                                HeaderCssClass="">
+                                                <Header>
+                                                    Utilities
+                                                </Header>
+                                                <Content>
+                                                       <a class="button" href="UpdateSalesTransactions.aspx"><span class="">Update Sales Trans</span> </a>
+                                                        <a class="button" href="UpdateCustDetails.aspx"><span class="">Update Customer Details</span> </a>
+                                                </Content>
+                                            </AjaxControlToolkit:AccordionPane>
+                                           
+                                        </Panes>
+                                    </AjaxControlToolkit:Accordion>
+                                </td>
+                                <td valign="top" colspan="2">
+                               
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                        </asp:UpdatePanel>
+                                    </asp:ContentPlaceHolder>
+                                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style2" valign="top">
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                                <td class="style4">
+                                    &nbsp;</td>
+                            </tr>
+                        </table>
+					</div>
+				</div>
+			</div>
+			<!-- end #content -->
+			
+			<div style="clear: both;">&nbsp;<br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+			<!-- end #widebar -->
+		</div>
+		<!-- end #page -->
+	</div>
+	<!-- end #wrapper2 -->
+	<div id="footer">
+       
+		<p style="text-align:right">(c) 2014 Customer Loyalty. Designed & Developed By Luminosoft Technologies</p>
+	</div>
+</div>
+    </div>
+    </form>
+</body>
+</html>

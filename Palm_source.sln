@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34302.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Loyalty_DTD", ".", "{B2F838A3-1878-4EC8-8385-B87D4BF40282}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/Palm_source"
+		Debug.AspNetCompiler.PhysicalPath = "..\Loyalty_DTD\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Palm_source\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Palm_source"
+		Release.AspNetCompiler.PhysicalPath = "..\Loyalty_DTD\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Palm_source\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "7795"
+		SlnRelativePath = "..\Loyalty_DTD\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2F838A3-1878-4EC8-8385-B87D4BF40282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2F838A3-1878-4EC8-8385-B87D4BF40282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2422A726-5972-4BB4-BAA9-93254B230F5B}
+	EndGlobalSection
+EndGlobal

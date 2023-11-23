@@ -1,0 +1,70 @@
+-select * from [Ly_RedeemTransHead]
+--GetRepo_Ly_RedeemTrans_Accounts '02/17/2012','03/19/2014',''
+--GetRepo_Ly_RedeemTrans_Accounts '01/01/1900','01/01/1900','1030000013'
+
+ALTER PROCEDURE [dbo].[GetRepo_Ly_RedeemTrans_Accounts] -- 2654.6
+@dtFrom as datetime,
+@dtTo as datetime,
+@custCd as char(10)=null
+
+as	
+	Declare @Ly_Points_Typ Char(10)
+	Select @Ly_Points_Typ=RTrim(Val) from Parameters where Cd='LY_POINTS_TYP'
+	
+  select
+  CustCd as cd,
+  (select Fname+' '+Mname+' '+lname from Ly_Customers where Cd=red.custCd) as [CustName], 
+  (Select CASE @Ly_Points_Typ when 'VAL' then isnull(Sum([Value]),0) else IsNull(Sum(Points),0) end from Ly_CustTrans where CustCd=red.CustCd) [totalPntsEarned],
+  (Select IsNull(Sum(Points),0) From Ly_RedeemTransDetail where TrnId in (Select TrnId from Ly_RedeemTransHead where DocStat='Post' and CustCd=red.CustCd))[totalRedeeemed],
+   
+  (select sum(value) from ly_custtrans where custcd=red.custCd) as [CurrentPoints],
+  (select SUM(Value)  FROM [Ly_CustTrans] where CustCd=red.CustCd and trnDt<red.TrnDt and CoCd='01') as [purchasePnts_comp1],
+  (select SUM(Value)  FROM [Ly_CustTrans] where CustCd=red.CustCd and trnDt<red.TrnDt and CoCd='02') as [purchasePnts_comp2],
+  (select SUM(Value)  FROM [Ly_CustTrans] where CustCd=red.CustCd and trnDt<red.TrnDt and CoCd='03') as [purchasePnts_comp3],           
+  ((Select CASE @Ly_Points_Typ when 'VAL' then isnull(Sum([Value]),0) else IsNull(Sum(Points),0) end from Ly_CustTrans where CustCd=red.CustCd)- (Select IsNull(Sum(Points),0) From Ly_RedeemTransDetail where TrnId in (Select TrnId from Ly_RedeemTransHead where DocStat='Post' and CustCd=red.CustCd))) as [BalPoints],
+  --((select SUM(Value)  FROM [Ly_CustTrans] where CustCd=red.CustCd and trnDt<red.TrnDt)-red.redPoints) as [BalancePoints]
+	'' amt_comp1,
+	'' amt_comp2,
+	'' amt_comp3,
+  case when @custCd='' then 'From:'+CONVERT(varchar(15),@dtFrom,105) +'  To:'+CONVERT(varchar(15),@dtTo,105) 
+  else 'Customer Code: '+custcd  end as dt,
+  CONVERT(varchar(15),trnDt,105) as [RedDate],
+  RedPoints as [currentRed],
+  '' as ResColumn
+  
+  from
+  [Ly_RedeemTransHead] red
+  where (trnDt between @dtFrom and @dtTo) or (CustCd=@custcd or CustCd=null)
+  order by CustCd
+
+
+
+
+
+
+------------------------------------------------------------------------------------
+old sp
+------------------------------------------------------------------------------------
+--GetRepo_Ly_RedeemTrans1 '01/20/2014','01/01/2014',''
+alter procedure GetRepo_Ly_RedeemTrans1
+@dtFrom as datetime,
+@dtTo as datetime,
+@cd as char(10)=null
+as
+select
+'' as cd,
+'' as CustName,
+'' totalPntsEarned,
+'' totalRedeeemed,
+'' purchasePnts_comp1,
+'' purchasePnts_comp2,
+'' purchasePnts_comp3,
+'' BalPoints,
+'' amt_comp1,
+'' amt_comp2,
+'' amt_comp3,
+  'From:'+CONVERT(varchar(15),@dtFrom,105) +'  To:'+CONVERT(varchar(15),@dtTo,105) as dt
+
+
+from Ly_Company
+
