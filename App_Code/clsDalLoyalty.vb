@@ -131,7 +131,7 @@ Public Class clsDalLoyalty
 
         cmd.Parameters.Add("@v_EntryBy", Data.SqlDbType.VarChar).Value = objBll.EntryBy
         cmd.Parameters.Add("@v_EditBy", Data.SqlDbType.VarChar).Value = objBll.EditBy
-
+        cmd.Parameters.Add("@v_PImage", Data.SqlDbType.VarChar).Value = ""
         Dim objDB As New clsDBOperation
         Return objDB.executeNonqry(cmd, "")
     End Function
